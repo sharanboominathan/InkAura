@@ -33,6 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', revealOnScroll);
 });
 
+// Preloader Logic
+window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+        // Delay hiding by 1.5s to show animation
+        setTimeout(() => {
+            preloader.style.opacity = "0";
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 500);
+        }, 1500);
+    }
+});
+
 // Helper to format WhatsApp message
 function sendWhatsAppMessage(productName = '') {
     const phoneNumber = "YOURNUMBER"; // Replace with actual number
