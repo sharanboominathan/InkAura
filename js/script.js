@@ -37,13 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener("load", function () {
     const preloader = document.getElementById("preloader");
     if (preloader) {
-        // Delay hiding by 1.5s to show animation
+        preloader.style.opacity = "0";
         setTimeout(() => {
-            preloader.style.opacity = "0";
-            setTimeout(() => {
-                preloader.style.display = "none";
-            }, 500);
-        }, 1500);
+            preloader.style.display = "none";
+        }, 500);
     }
 });
 
