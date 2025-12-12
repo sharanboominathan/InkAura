@@ -1,0 +1,488 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inkAura - Custom T-Shirts, Pencil Sketches & Gifts</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Inkaura offers premium custom T-shirt printing, digital oil paintings, pencil drawings, resin arts, and corporate merchandise. Transform your photos into stunning digital oil paintings. Same-day delivery available.">
+    <meta name="keywords"
+        content="custom t-shirt printing, digital oil painting, oil painting effect, pencil drawings, handmade portraits, resin art, photo to oil painting, bulk t-shirts, corporate gifts, DTF printing, embroidery, inkAura">
+    <meta name="author" content="inkAura">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.inkaura.com/">
+    <meta property="og:title" content="Inkaura - Custom T-Shirts, Pencil Sketches & Gifts">
+    <meta property="og:description"
+        content="Premium custom printing for T-shirts, digital oil paintings, pencil portraits, resin masterpieces, and branding merchandise.">
+    <meta property="og:image" content="images/hero.PNG">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.inkaura.com/">
+    <meta property="twitter:title" content="Inkaura - Custom T-Shirts, Pencil Sketches & Gifts">
+    <meta property="twitter:description"
+        content="Premium custom printing for T-shirts, digital oil paintings, pencil portraits, resin masterpieces, and branding merchandise.">
+    <meta property="twitter:image" content="images/hero.PNG">
+
+    <!-- Schema.org Data for LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Inkaura",
+      "image": "images/hero.PNG",
+      "description": "Premium custom T-shirt printing, digital oil paintings, pencil drawings, resin arts, and professional digital art services.",
+      "telephone": "+917305885870",
+      "email": "info@inkaura.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Street Name",
+        "addressLocality": "City Name",
+        "addressRegion": "State",
+        "postalCode": "600000",
+        "addressCountry": "IN"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "21:00"
+      },
+      "url": "https://www.inkaura.com/"
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/inkaura.png" alt="inkAura" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <span class="text-royal fw-bold text-uppercase mb-2 d-block">The artistic vibe created through ink &
+                        creativity.</span>
+                    <h1>T-Shirts | Handmade Pencil Art | Digital Oil Paintings</h1>
+                    <p>From ultra-soft custom tees to breathtaking oil portraits, hyper-realistic pencil sketches, and
+                        elegant resin creations — we transform your ideas into timeless art.</p>
+                    <div class="d-flex gap-3">
+                        <a href="services.html" class="btn btn-primary-custom">Explore Services</a>
+                        <a href="https://wa.me/917305885870" class="btn btn-outline-custom"><i
+                                class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image text-center">
+                    <img src="images/hero.PNG" alt="Custom Printing & Art" class="img-fluid reveal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="feature-card">
+                        <i class="fas fa-shipping-fast feature-icon"></i>
+                        <h5>Same-Day Printing</h5>
+                        <p class="small text-muted mb-0">Fast turnaround for urgent orders</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-card">
+                        <i class="fas fa-pencil-alt feature-icon"></i>
+                        <h5>Handmade Art</h5>
+                        <p class="small text-muted mb-0">Realistic sketches & resin works</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-card">
+                        <i class="fas fa-paint-brush feature-icon"></i>
+                        <h5>Free Design Support</h5>
+                        <p class="small text-muted mb-0">We help bring your ideas to life</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-card">
+                        <i class="fas fa-fingerprint feature-icon"></i>
+                        <h5>100% Custom</h5>
+                        <p class="small text-muted mb-0">Unique gifts made just for you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Categories -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-royal fw-bold text-uppercase">Our Collections</h6>
+                <h2>Popular Categories</h2>
+                <div style="width: 60px; height: 3px; background: var(--secondary-color); margin: 15px auto;"></div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Category 1 - T-Shirts (Main) -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="images/T-shirt_main.png" alt="Custom T-Shirts">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Custom T-Shirts</h5>
+                            <p class="text-muted small">Cotton, Dry-fit, Couple & Team Tees</p>
+                            <a href="products.html" class="btn btn-sm btn-outline-custom stretched-link">View
+                                Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 2 - Pencil Drawings (Main) -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="images/drawingmain.png" alt="Pencil Sketches">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Pencil Drawings</h5>
+                            <p class="text-muted small">Handmade Portraits A4/A3 Size</p>
+                            <a href="products.html" class="btn btn-sm btn-outline-custom stretched-link">View
+                                Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 3 - Resin Art -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="images/resinmain.png" alt="Resin Art">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Resin Arts</h5>
+                            <p class="text-muted small">Clocks, Frames & Keychains</p>
+                            <a href="products.html" class="btn btn-sm btn-outline-custom stretched-link">View
+                                Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 4 - Gifts -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="images/oilpainting-01.jpeg" alt="Oil Paintings">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Oil Paintings</h5>
+                            <p class="text-muted small">Custom Digital Oil Paintings from Photos</p>
+                            <a href="products.html" class="btn btn-sm btn-outline-custom stretched-link">View
+                                Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 5 - Branding (New) -->
+                <!-- <div class="col-md-3 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="images/assets/Branding/Branding/watch.jpg" alt="Branding">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Branding</h5>
+                            <p class="text-muted small">Business Cards & Identity</p>
+                            <a href="services.html" class="btn btn-sm btn-outline-custom stretched-link">View
+                                Services</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="images/logo.png" alt="Logo Design">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Logo</h5>
+                            <p class="text-muted small">Logo Design, Business Cards & Identity</p>
+                            <a href="services.html" class="btn btn-sm btn-outline-custom stretched-link">View
+                                Services</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="text-center mt-5">
+                <a href="products.html" class="btn btn-primary-custom px-5">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-royal fw-bold text-uppercase">Testimonials</h6>
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-card">
+                                    <img src="https://placehold.co/100x100/ddd/333?text=A" alt="Customer"
+                                        class="testimonial-img">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i>
+                                    </div>
+                                    <p class="fst-italic">"Ordered bulk t-shirts for our corporate event. The quality
+                                        was amazing and they delivered it within 24 hours! Highly recommended."</p>
+                                    <h6 class="fw-bold mt-3">- Sangamithra M.</h6>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card">
+                                    <img src="https://placehold.co/100x100/ddd/333?text=S" alt="Customer"
+                                        class="testimonial-img">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                            class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p class="fst-italic">"Got a customized LED frame for my anniversary. My wife loved
+                                        it! The print clarity is fantastic."</p>
+                                    <h6 class="fw-bold mt-3">- Mandikandan V.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container pb-4">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3">InkAura</h5>
+                    <p class="small">Your one-stop shop for premium custom printing and handmade oil
+                        paintings. We bring your imagination to life through art.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html"><i class="fas fa-tshirt"></i> T-Shirt Printing</a></li>
+                        <li><a href="services.html"><i class="fas fa-gift"></i> Corporate Gifts</a></li>
+                        <li><a href="services.html"><i class="fas fa-mug-hot"></i> Mug Printing</a></li>
+                        <li><a href="services.html"><i class="fas fa-images"></i> Photo Frames</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Street Name, City,
+                                India</a></li>
+                        <li class="mb-2"><a href="tel:+917305885870"><i class="fas fa-phone"></i> +91 7305885870</a>
+                        </li>
+                        <li class="mb-2"><a href="mailto:info@inkaura.com"><i class="fas fa-envelope"></i>
+                                info@inkaura.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary mt-5" style="opacity: 0.1;">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; <span id="year"></span> inkAura. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">Designed for Excellence</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <style>
+        #wa-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999999 !important;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        #wa-bubble {
+            background: #ffffff;
+            color: #333;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+            animation: fadeIn 1.2s ease-out forwards;
+            border: 1px solid #e8e8e8;
+            display: none;
+        }
+
+        #wa-chat-btn {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            animation: bounce 1.2s infinite ease-in-out;
+        }
+
+        #wa-chat-btn svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <div id="wa-container">
+        <div id="wa-bubble">Need help? Chat with us on WhatsApp 👋</div>
+        <div id="wa-chat-btn" onclick="openWAChat()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path
+                    d="M16.001 3.2c-7.034 0-12.8 5.766-12.8 12.8 0 2.257.589 4.454 1.708 6.387L3.2 28.8l6.597-1.683c1.86.999 3.955 1.521 6.204 1.521 7.034 0 12.8-5.766 12.8-12.8s-5.766-12.8-12.8-12.8zm0 23.467c-1.999 0-3.944-.523-5.645-1.515l-.404-.238-3.915.998 1.04-3.82-.263-.393c-1.07-1.602-1.636-3.465-1.636-5.396 0-5.52 4.491-10.011 10.011-10.011s10.011 4.491 10.011 10.011-4.491 10.011-10.011 10.011zm5.53-7.493c-.301-.15-1.778-.879-2.053-.978-.276-.1-.478-.15-.679.15-.199.301-.779.978-.954 1.178-.176.199-.351.226-.652.075-.301-.15-1.271-.468-2.421-1.492-.895-.797-1.499-1.783-1.675-2.083-.176-.301-.019-.464.131-.614.135-.134.301-.351.451-.527.15-.176.199-.301.301-.502.1-.199.05-.376-.025-.527-.075-.15-.679-1.64-.931-2.244-.245-.589-.494-.509-.679-.519l-.577-.01c-.199 0-.527.075-.802.376-.276.301-1.052 1.027-1.052 2.502s1.078 2.907 1.228 3.107c.15.199 2.127 3.249 5.16 4.556.721.311 1.283.497 1.721.636.722.229 1.378.196 1.895.119.579-.086 1.778-.726 2.03-1.428.251-.702.251-1.304.176-1.428-.075-.125-.276-.199-.577-.35z" />
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        const waMsgs = [
+            "Hi, I have an enquiry 😊",
+            "Hello! I need more details.",
+            "Hi team, I have a question.",
+            "Hey! Need some help regarding services."
+        ];
+        const waMsg = encodeURIComponent(waMsgs[Math.floor(Math.random() * waMsgs.length)]);
+
+        function openWAChat() {
+            window.open("https://wa.me/917305885870?text=" + waMsg, "_blank");
+        }
+
+        setTimeout(() => {
+            document.getElementById("wa-bubble").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("wa-bubble").style.display = "none";
+            }, 5000);
+        }, 2000);
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
