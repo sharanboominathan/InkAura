@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Catalog - Custom Gifts & T-Shirts | inkAura</title>
+    <title>Product Catalog - Custom Gifts & T-Shirts | Tom & Ted</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description"
@@ -15,8 +15,8 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.inkaura.com/products.html">
-    <meta property="og:title" content="Product Catalog - inkAura">
+    <meta property="og:url" content="https://www.tomandted.com/products.html">
+    <meta property="og:title" content="Product Catalog - Tom & Ted">
     <meta property="og:description" content="Discover unique personalized gifts and premium custom apparel.">
     <meta property="og:image" content="images/giftmain.png">
 
@@ -75,7 +75,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/inkaura.png" alt="inkAura" style="height: 40px;">
+                <img src="images/T&T.png" alt="Tom & Ted" style="height: 80px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -85,7 +85,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
@@ -293,7 +293,7 @@
         <div class="container pb-4">
             <div class="row g-4">
                 <div class="col-md-4">
-                    <h5 class="mb-3">InkAura</h5>
+                    <h5 class="mb-3">Tom & Ted</h5>
                     <p class="small">Your one-stop shop for premium custom printing and handmade oil
                         paintings. We bring your imagination to life through art.</p>
                     <div class="social-links mt-3">
@@ -323,19 +323,19 @@
                 <div class="col-md-3">
                     <h5 class="mb-3">Contact Us</h5>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Street Name, Cbe, IN</a>
-                        </li>
+                        <li class="mb-2"><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Street Name, City,
+                                India</a></li>
                         <li class="mb-2"><a href="tel:+917305885870"><i class="fas fa-phone"></i> +91 7305885870</a>
                         </li>
-                        <li class="mb-2"><a href="mailto:info@inkaura.com"><i class="fas fa-envelope"></i>
-                                info@inkaura.com</a></li>
+                        <li class="mb-2"><a href="mailto:info@tomandted.com"><i class="fas fa-envelope"></i>
+                                info@tomandted.com</a></li>
                     </ul>
                 </div>
             </div>
             <hr class="border-secondary mt-5" style="opacity: 0.1;">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="small mb-0">&copy; <span id="year"></span> inkAura. All rights reserved.</p>
+                    <p class="small mb-0">&copy; <span id="year"></span> Tom & Ted. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <p class="small mb-0">Designed for Excellence</p>
@@ -344,6 +344,105 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <style>
+        #wa-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999999 !important;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        #wa-bubble {
+            background: #ffffff;
+            color: #333;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+            animation: fadeIn 1.2s ease-out forwards;
+            border: 1px solid #e8e8e8;
+            display: none;
+        }
+
+        #wa-chat-btn {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            animation: bounce 1.2s infinite ease-in-out;
+        }
+
+        #wa-chat-btn svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <div id="wa-container">
+        <div id="wa-bubble">Need help? Chat with us on WhatsApp 👋</div>
+        <div id="wa-chat-btn" onclick="openWAChat()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path
+                    d="M16.001 3.2c-7.034 0-12.8 5.766-12.8 12.8 0 2.257.589 4.454 1.708 6.387L3.2 28.8l6.597-1.683c1.86.999 3.955 1.521 6.204 1.521 7.034 0 12.8-5.766 12.8-12.8s-5.766-12.8-12.8-12.8zm0 23.467c-1.999 0-3.944-.523-5.645-1.515l-.404-.238-3.915.998 1.04-3.82-.263-.393c-1.07-1.602-1.636-3.465-1.636-5.396 0-5.52 4.491-10.011 10.011-10.011s10.011 4.491 10.011 10.011-4.491 10.011-10.011 10.011zm5.53-7.493c-.301-.15-1.778-.879-2.053-.978-.276-.1-.478-.15-.679.15-.199.301-.779.978-.954 1.178-.176.199-.351.226-.652.075-.301-.15-1.271-.468-2.421-1.492-.895-.797-1.499-1.783-1.675-2.083-.176-.301-.019-.464.131-.614.135-.134.301-.351.451-.527.15-.176.199-.301.301-.502.1-.199.05-.376-.025-.527-.075-.15-.679-1.64-.931-2.244-.245-.589-.494-.509-.679-.519l-.577-.01c-.199 0-.527.075-.802.376-.276.301-1.052 1.027-1.052 2.502s1.078 2.907 1.228 3.107c.15.199 2.127 3.249 5.16 4.556.721.311 1.283.497 1.721.636.722.229 1.378.196 1.895.119.579-.086 1.778-.726 2.03-1.428.251-.702.251-1.304.176-1.428-.075-.125-.276-.199-.577-.35z" />
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        const waMsgs = [
+            "Hi, I have an enquiry 😊",
+            "Hello! I need more details.",
+            "Hi i need to know more about your services",
+            "Hey! send me more details"
+        ];
+        const waMsg = encodeURIComponent(waMsgs[Math.floor(Math.random() * waMsgs.length)]);
+
+        function openWAChat() {
+            window.open("https://wa.me/917305885870?text=" + waMsg, "_blank");
+        }
+
+        setTimeout(() => {
+            document.getElementById("wa-bubble").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("wa-bubble").style.display = "none";
+            }, 5000);
+        }, 2000);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

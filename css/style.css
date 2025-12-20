@@ -1,21 +1,21 @@
 /* ===== CSS Variables with Psychology-Based Color Scheme ===== */
 :root {
-    /* Trust & Professionalism (Blue) */
-    --primary-color: #4169e1;
-    --primary-dark: #2948b8;
-    --primary-light: #6b8ef7;
+    /* Trust & Professionalism (Blue) -> Premium Black */
+    --primary-color: #000000;
+    --primary-dark: #1a1a1a;
+    --primary-light: #333333;
 
-    /* Optimism & Energy (Gold/Yellow) */
-    --secondary-color: #ffd700;
-    --accent-warm: #ff6b35;
+    /* Optimism & Energy (Gold/Yellow) -> Premium Grays */
+    --secondary-color: #4a4a4a;
+    --accent-warm: #666666;
 
-    /* Trust & Success (Green for CTA) */
-    --success-color: #10b981;
-    --success-dark: #059669;
+    /* Trust & Success (Green for CTA) -> Monochrome Success */
+    --success-color: #000000;
+    --success-dark: #333333;
 
-    /* Urgency & Attention (Red/Orange) */
-    --urgency-color: #ef4444;
-    --urgency-soft: #fef3c7;
+    /* Urgency & Attention (Red/Orange) -> High Contrast */
+    --urgency-color: #000000;
+    --urgency-soft: #f4f4f4;
 
     /* Neutrals for Balance */
     --text-dark: #1a202c;
@@ -234,6 +234,11 @@ img {
     color: var(--primary-color) !important;
 }
 
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
 .nav-link::after {
     content: '';
     position: absolute;
@@ -255,7 +260,7 @@ img {
 /* ===== Hero Section with Emotional Appeal ===== */
 .hero-section {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 50%, #e6f2ff 100%);
+    background: #ffffff;
     padding-top: 100px;
     position: relative;
     overflow: hidden;
@@ -278,7 +283,7 @@ img {
     font-weight: 800;
     margin-bottom: 20px;
     line-height: 1.2;
-    background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary-color) 100%);
+    background: var(--text-dark);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -572,7 +577,7 @@ img {
 
 /* ===== Footer with Premium Aura Theme ===== */
 footer {
-    background: linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 50%, #1a0b2e 100%);
+    background: #000000;
     color: white;
     padding: 70px 0 30px;
     position: relative;
@@ -585,13 +590,13 @@ footer::before {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color), var(--secondary-color));
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    height: 1px;
+    background: #333333;
+    box-shadow: none;
 }
 
 footer h5 {
-    color: var(--secondary-color);
+    color: #ffffff;
     margin-bottom: 25px;
     font-size: 1.3rem;
     font-weight: 700;
@@ -606,7 +611,7 @@ footer h5::after {
     bottom: -8px;
     width: 40px;
     height: 2px;
-    background: var(--primary-light);
+    background: #ffffff;
     border-radius: 2px;
 }
 
@@ -625,14 +630,14 @@ footer a {
 
 footer a i {
     margin-right: 10px;
-    color: var(--primary-light);
+    color: #ffffff;
     transition: transform 0.3s ease;
     width: 20px;
     text-align: center;
 }
 
 footer a:hover {
-    color: var(--secondary-color);
+    color: #ffffff;
     padding-left: 8px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 4px;
@@ -640,7 +645,7 @@ footer a:hover {
 
 footer a:hover i {
     transform: scale(1.2);
-    color: var(--secondary-color);
+    color: #ffffff;
 }
 
 footer p,
@@ -751,26 +756,19 @@ footer .small {
 
 /* ===== Page Header with Visual Impact ===== */
 .bg-light.py-5.mt-5 {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
-    color: white;
+    background: #ffffff;
+    color: var(--text-dark);
     position: relative;
     overflow: hidden;
 }
 
 .bg-light.py-5.mt-5::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
-    opacity: 0.3;
+    display: none;
 }
 
 .bg-light.py-5.mt-5 h1,
 .bg-light.py-5.mt-5 .lead {
-    color: white !important;
+    color: var(--text-dark) !important;
     position: relative;
     z-index: 1;
 }
@@ -788,6 +786,14 @@ footer .small {
 
     .hero-content .d-flex {
         justify-content: center;
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content .d-flex .btn {
+        width: 100%;
+        max-width: 300px;
     }
 
     .hero-image {
@@ -796,6 +802,17 @@ footer .small {
 
     .footer .row {
         text-align: center;
+    }
+
+    section h2,
+    .section-title h2,
+    .container h2 {
+        text-align: center !important;
+    }
+
+    section p.text-muted,
+    .container p.lead {
+        text-align: center !important;
     }
 
     .social-links {
