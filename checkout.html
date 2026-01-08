@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Tom & Ted</title>
+    <!-- Fonts and Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="bg-light py-5 mt-5">
+        <div class="container text-center pt-5">
+            <h1 class="fw-bold">Checkout</h1>
+            <p class="text-muted">Complete your order details.</p>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="py-5">
+        <div class="container">
+            <form id="checkout-form" onsubmit="handleOrder(event)">
+                <div class="row">
+                    <!-- Customer Details -->
+                    <div class="col-lg-7">
+                        <div class="card checkout-card mb-4">
+                            <div class="card-body p-4">
+                                <h4 class="mb-4">Shipping Details</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" id="fullname" class="form-control" required
+                                            placeholder="John Doe">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="tel" id="phone" class="form-control" required
+                                            placeholder="+91 9876543210">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Address</label>
+                                        <textarea id="address" class="form-control" rows="3" required
+                                            placeholder="Street address, Flat No..."></textarea>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">City</label>
+                                        <input type="text" id="city" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Pincode</label>
+                                        <input type="text" id="pincode" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card checkout-card mb-4">
+                            <div class="card-body p-4">
+                                <h4 class="mb-4">Payment Method</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="payment-option-card" onclick="selectPayment('upi')" id="pay-upi">
+                                            <i class="fas fa-qrcode payment-icon"></i>
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">UPI / QR Code</h6>
+                                                <small class="text-muted">Scan & Pay securely</small>
+                                            </div>
+                                            <input type="radio" name="payment" value="upi" class="d-none" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="payment-option-card" onclick="selectPayment('cod')" id="pay-cod">
+                                            <i class="fas fa-money-bill-wave payment-icon"></i>
+                                            <div>
+                                                <h6 class="mb-0 fw-bold">Cash on Delivery</h6>
+                                                <small class="text-muted">Pay at doorstep</small>
+                                            </div>
+                                            <input type="radio" name="payment" value="cod" class="d-none">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="col-lg-5">
+                        <div class="card checkout-card bg-light">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold mb-4">Your Order</h5>
+                                <div id="checkout-items">
+                                    <!-- Items Injected Here -->
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Subtotal</span>
+                                    <span class="fw-bold" id="checkout-subtotal">₹0</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Shipping</span>
+                                    <span class="text-success">Free</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4 mt-3 p-3 bg-white rounded border">
+                                    <span class="fw-bold">Total Amount</span>
+                                    <span class="fw-bold fs-4 text-royal" id="checkout-total">₹0</span>
+                                </div>
+
+                                <div class="alert alert-info border-0 d-flex align-items-center mb-4">
+                                    <i class="fas fa-truck me-3 fs-4"></i>
+                                    <div>
+                                        <small class="d-block text-muted">Estimated Delivery</small>
+                                        <strong id="delivery-date">Loading...</strong>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary-custom w-100 py-3 fs-5 shadow-sm">
+                                    Place Order <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- UPI Modal -->
+    <div class="modal fade" id="upiModal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="qr-modal-content">
+                    <h4 class="fw-bold mb-2">Scan to Pay</h4>
+                    <p class="text-muted">Total: <span id="modal-amount" class="fw-bold text-dark"></span></p>
+
+                    <!-- Placeholder QR DOwnload link usually but using static image -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=7305885870@upi&pn=TomAndTed&am=1&cu=INR"
+                        alt="UPI QR" class="qr-image img-fluid">
+
+                    <p class="small text-muted mb-4">Scan using GPay, PhonePe or Paytm</p>
+
+                    <button type="button" class="btn btn-success w-100 py-2" onclick="confirmPayment()">
+                        I have made the payment
+                    </button>
+                    <button type="button" class="btn btn-link text-muted mt-2 btn-sm"
+                        data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Checkout Logic
+        const deliveryDateEl = document.getElementById('delivery-date');
+        const today = new Date();
+        const deliveryDate = new Date(today);
+        deliveryDate.setDate(today.getDate() + 5); // 5 days delivery
+        const options = { weekday: 'short', month: 'short', day: 'numeric' };
+        deliveryDateEl.textContent = deliveryDate.toLocaleDateString('en-IN', options);
+
+        // Render Checkout Summary
+        let totalAmount = 0;
+        const checkoutList = document.getElementById('checkout-items');
+        if (cart.length === 0) {
+            window.location.href = 'products.html';
+        }
+
+        cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            totalAmount += itemTotal;
+            checkoutList.innerHTML += `
+                 <div class="d-flex justify-content-between mb-2 small">
+                    <span>${item.name} <span class="text-muted">x${item.quantity}</span></span>
+                    <span>₹${itemTotal}</span>
+                </div>
+            `;
+        });
+        document.getElementById('checkout-subtotal').textContent = '₹' + totalAmount;
+        document.getElementById('checkout-total').textContent = '₹' + totalAmount;
+        document.getElementById('modal-amount').textContent = '₹' + totalAmount;
+
+        // Payment Selection
+        let selectedPaymentMethod = '';
+        function selectPayment(method) {
+            selectedPaymentMethod = method;
+            document.querySelectorAll('.payment-option-card').forEach(el => el.classList.remove('selected'));
+            document.getElementById('pay-' + method).classList.add('selected');
+            document.querySelector(`input[value="${method}"]`).checked = true;
+        }
+
+        // Handle Form Submit
+        function handleOrder(e) {
+            e.preventDefault();
+            if (!selectedPaymentMethod) {
+                alert('Please select a payment method');
+                return;
+            }
+
+            if (selectedPaymentMethod === 'upi') {
+                const upiModal = new bootstrap.Modal(document.getElementById('upiModal'));
+                upiModal.show();
+            } else {
+                // COD
+                completeOrder();
+            }
+        }
+
+        function confirmPayment() {
+            // In real app, verify backend here.
+            completeOrder();
+        }
+
+        function completeOrder() {
+            // 1. Gather Details
+            const fullname = document.getElementById('fullname').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const pincode = document.getElementById('pincode').value;
+            const paymentMethod = selectedPaymentMethod === 'upi' ? 'UPI / QR Code' : 'Cash on Delivery';
+
+            // 2. Format Items
+            let itemsDetails = '';
+            cart.forEach((item, index) => {
+                itemsDetails += `${index + 1}. ${item.name} (x${item.quantity}) - ₹${item.price * item.quantity}\n`;
+            });
+
+            // 3. Construct Message
+            const message = `*New Order Request*\n\n` +
+                `*Customer Details:*\n` +
+                `Name: ${fullname}\n` +
+                `Phone: ${phone}\n` +
+                `Address: ${address}, ${city} - ${pincode}\n\n` +
+                `*Order Details:*\n` +
+                `${itemsDetails}\n` +
+                `*Total Amount:* ₹${totalAmount}\n` +
+                `*Payment Method:* ${paymentMethod}\n\n` +
+                `Please confirm my order.`;
+
+            // 4. WhatsApp URL
+            const phoneNumber = "917305885870"; // Country code + number
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // 5. Clear Cart and Redirect
+            localStorage.removeItem('myCart');
+
+            // Redirect to WhatsApp
+            window.location.href = whatsappUrl;
+        }
+    </script>
+</body>
+
+</html>

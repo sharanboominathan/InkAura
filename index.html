@@ -93,27 +93,8 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/T&T.png" alt="Tom & Ted" style="height: 60px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center">
@@ -143,7 +124,7 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-3 col-6">
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <i class="fas fa-shipping-fast feature-icon"></i>
                         <h5>Same-Day Printing</h5>
                         <p class="small text-muted mb-0">Fast turnaround for urgent orders</p>
@@ -185,10 +166,10 @@
 
             <div class="row g-4 justify-content-center">
                 <!-- Category 1 - T-Shirts (Main) -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="product-card">
+                <div class="col-md-3 col-6">
+                    <div class="product-card reveal">
                         <div class="product-img-wrapper">
-                            <img src="images/T-shirt_main.png" alt="Custom T-Shirts">
+                            <img src="images/T-shirt/oversized.png" alt="Custom T-Shirts">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Custom T-Shirts</h5>
@@ -199,10 +180,10 @@
                     </div>
                 </div>
                 <!-- Category 2 - Pencil Drawings (Main) -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="product-card">
+                <div class="col-md-3 col-6">
+                    <div class="product-card reveal">
                         <div class="product-img-wrapper">
-                            <img src="images/drawingmain.png" alt="Pencil Sketches">
+                            <img src="images/Drawing/drawingmain.png" alt="Pencil Sketches">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Pencil Drawings</h5>
@@ -213,10 +194,10 @@
                     </div>
                 </div>
                 <!-- Category 3 - Resin Art -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="product-card">
+                <div class="col-md-3 col-6">
+                    <div class="product-card reveal">
                         <div class="product-img-wrapper">
-                            <img src="images/resinmain.png" alt="Resin Art">
+                            <img src="images/Resin Art/resinmain.png" alt="Resin Art">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Resin Arts</h5>
@@ -227,10 +208,10 @@
                     </div>
                 </div>
                 <!-- Category 4 - Gifts -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="product-card">
+                <div class="col-md-3 col-6">
+                    <div class="product-card reveal">
                         <div class="product-img-wrapper">
-                            <img src="images/oilpainting-01.jpeg" alt="Oil Paintings">
+                            <img src="images/Digital Painting/oilpainting-01.jpeg" alt="Oil Paintings">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Digital Oil Paintings</h5>
@@ -286,7 +267,7 @@
                     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="testimonial-card">
+                                <div class="testimonial-card reveal">
                                     <img src="https://placehold.co/100x100/ddd/333?text=A" alt="Customer"
                                         class="testimonial-img">
                                     <div class="stars">
@@ -329,160 +310,8 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container pb-4">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <h5 class="mb-3">Tom & Ted</h5>
-                    <p class="small">Your one-stop shop for premium custom printing and handmade oil
-                        paintings. We bring your imagination to life through art.</p>
-                    <div class="social-links mt-3">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <h5 class="mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
-                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="mb-3">Services</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="services.html"><i class="fas fa-tshirt"></i> T-Shirt Printing</a></li>
-                        <li><a href="services.html"><i class="fas fa-gift"></i> Corporate Gifts</a></li>
-                        <li><a href="services.html"><i class="fas fa-mug-hot"></i> Mug Printing</a></li>
-                        <li><a href="services.html"><i class="fas fa-images"></i> Photo Frames</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="mb-3">Contact Us</h5>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Street Name, City,
-                                India</a></li>
-                        <li class="mb-2"><a href="tel:+917305885870"><i class="fas fa-phone"></i> +91 7305885870</a>
-                        </li>
-                        <li class="mb-2"><a href="mailto:info@tomandted.com"><i class="fas fa-envelope"></i>
-                                info@tomandted.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="border-secondary mt-5" style="opacity: 0.1;">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="small mb-0">&copy; <span id="year"></span> Tom & Ted. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="small mb-0">Designed for Excellence</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Floating Button -->
-    <style>
-        #wa-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999999 !important;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 10px;
-        }
-
-        #wa-bubble {
-            background: #ffffff;
-            color: #333;
-            padding: 10px 16px;
-            border-radius: 12px;
-            font-size: 14px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
-            animation: fadeIn 1.2s ease-out forwards;
-            border: 1px solid #e8e8e8;
-            display: none;
-        }
-
-        #wa-chat-btn {
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-            animation: bounce 1.2s infinite ease-in-out;
-        }
-
-        #wa-chat-btn svg {
-            width: 36px;
-            height: 36px;
-            fill: white;
-        }
-
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-6px);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(5px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-
-    <div id="wa-container">
-        <div id="wa-bubble">Need help? Chat with us on WhatsApp 👋</div>
-        <div id="wa-chat-btn" onclick="openWAChat()">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                <path
-                    d="M16.001 3.2c-7.034 0-12.8 5.766-12.8 12.8 0 2.257.589 4.454 1.708 6.387L3.2 28.8l6.597-1.683c1.86.999 3.955 1.521 6.204 1.521 7.034 0 12.8-5.766 12.8-12.8s-5.766-12.8-12.8-12.8zm0 23.467c-1.999 0-3.944-.523-5.645-1.515l-.404-.238-3.915.998 1.04-3.82-.263-.393c-1.07-1.602-1.636-3.465-1.636-5.396 0-5.52 4.491-10.011 10.011-10.011s10.011 4.491 10.011 10.011-4.491 10.011-10.011 10.011zm5.53-7.493c-.301-.15-1.778-.879-2.053-.978-.276-.1-.478-.15-.679.15-.199.301-.779.978-.954 1.178-.176.199-.351.226-.652.075-.301-.15-1.271-.468-2.421-1.492-.895-.797-1.499-1.783-1.675-2.083-.176-.301-.019-.464.131-.614.135-.134.301-.351.451-.527.15-.176.199-.301.301-.502.1-.199.05-.376-.025-.527-.075-.15-.679-1.64-.931-2.244-.245-.589-.494-.509-.679-.519l-.577-.01c-.199 0-.527.075-.802.376-.276.301-1.052 1.027-1.052 2.502s1.078 2.907 1.228 3.107c.15.199 2.127 3.249 5.16 4.556.721.311 1.283.497 1.721.636.722.229 1.378.196 1.895.119.579-.086 1.778-.726 2.03-1.428.251-.702.251-1.304.176-1.428-.075-.125-.276-.199-.577-.35z" />
-            </svg>
-        </div>
-    </div>
-
-    <script>
-        const waMsgs = [
-            "Hi, I have an enquiry 😊",
-            "Hello! I need more details.",
-            "Hi i need to know more about your services",
-            "Hey! send me more details"
-        ];
-        const waMsg = encodeURIComponent(waMsgs[Math.floor(Math.random() * waMsgs.length)]);
-
-        function openWAChat() {
-            window.open("https://wa.me/917305885870?text=" + waMsg, "_blank");
-        }
-
-        setTimeout(() => {
-            document.getElementById("wa-bubble").style.display = "block";
-            setTimeout(() => {
-                document.getElementById("wa-bubble").style.display = "none";
-            }, 5000);
-        }, 2000);
-    </script>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
